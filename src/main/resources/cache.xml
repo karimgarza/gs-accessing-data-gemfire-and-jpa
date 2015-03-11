@@ -5,7 +5,8 @@
     <cache-server max-connections="20" />               
         <region name="Customer">
             <region-attributes data-policy="replicate"
-                               statistics-enabled="true">
+                               statistics-enabled="true"
+                               >
                 <entry-idle-time>
                     <expiration-attributes timeout="3000" action="destroy" />
                 </entry-idle-time>

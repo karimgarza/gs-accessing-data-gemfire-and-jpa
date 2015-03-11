@@ -38,17 +38,18 @@ public class CustomerResource {
 	}
 	
 	@RequestMapping("/createCustomers")
-	public void createCustomers() {
+	public String createCustomers() {
 
-//		jpaRepository.save(new Customer(1, "Karim", "Bauer"));
-//		jpaRepository.save(new Customer(2, "Chloe", "OBrian"));
-//		jpaRepository.save(new Customer(3, "Kim", "Bauer"));
-//		jpaRepository.save(new Customer(4, "David", "Palmer"));
-//		jpaRepository.save(new Customer(5, "Michelle", "Dessler"));
-//
-//		for (Customer customer : repository.findAll()) {
-//			System.out.println(customer);
-//			gfRepository.save(customer);
-//		}
+		jpaRepository.save(new Customer(1, "Karim", "Bauer"));
+		jpaRepository.save(new Customer(2, "Chloe", "OBrian"));
+		jpaRepository.save(new Customer(3, "Kim", "Bauer"));
+		jpaRepository.save(new Customer(4, "David", "Palmer"));
+		jpaRepository.save(new Customer(5, "Michelle", "Dessler"));
+
+		for (Customer customer : jpaRepository.findAll()) {
+			System.out.println(customer);
+			gfRepository.save(customer);
+		}
+		return "Created 5 customers.";
 	}
 }
