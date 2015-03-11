@@ -3,8 +3,6 @@ package hello;
 import javax.sql.DataSource;
 
 import hello.domain.Customer;
-import hello.gfrepositories.GemfireCustomerRepository;
-import hello.jparepositories.JPACustomerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
